@@ -33,4 +33,7 @@ TODO:
     * coding challenges from the 60s / 70s where some participants were 10x better than others
     * mostly mathematical tasks
     * "Exploratory experimental studies comparing online and offline programming performance", 1968, H. Sackman, W. J. Erikson, E. E. Grant
+    * refuted many times:
+        * even if they existed, you couldn't hire them off the street
+        * much better to have your 1x devs develop the right thing
 
