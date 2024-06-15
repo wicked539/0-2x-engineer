@@ -28,4 +28,9 @@ TODO:
 
 * not invented here? dont repeat yourself?
 * how to hire the right ppl / build 0.2x organisation?
-* research on 10x
+* 10x-engineer myth
+    * exact origin unclear
+    * coding challenges from the 60s / 70s where some participants were 10x better than others
+    * mostly mathematical tasks
+    * "Exploratory experimental studies comparing online and offline programming performance", 1968, H. Sackman, W. J. Erikson, E. E. Grant
+
