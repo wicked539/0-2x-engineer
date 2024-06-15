@@ -24,7 +24,8 @@
     * 80/20 time for experiments
     * demand validation of techinal propositions
 
+TODO:
 
-not invented here? dont repeat yourself?
-
-how to hire the right ppl / build 0.2x organisation?
+* not invented here? dont repeat yourself?
+* how to hire the right ppl / build 0.2x organisation?
+* research on 10x
