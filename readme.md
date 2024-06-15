@@ -1,5 +1,13 @@
 0.2x engineer
 
+* 10x-engineer myth
+    * exact origin unclear
+    * coding challenges from the 60s / 70s where some participants were 10x better than others
+        * "Exploratory experimental studies comparing online and offline programming performance", 1968, H. Sackman, W. J. Erikson, E. E. Grant
+    * mostly mathematical tasks
+    * refuted many times:
+        * even if they existed, you couldn't hire them off the street
+        * much better to have your 1x devs develop the right thing
 * 80% of work in 20% of time
 * 80%-solutions are sufficient for 80% of the use cases
 * how do we find out which 80% of features to build?
@@ -23,17 +31,15 @@
 * and how to keep devs from building them anyway?
     * 80/20 time for experiments
     * demand validation of techinal propositions
+    * beware of classic anti-patterns: dry, kiss, yagni, nih
+    * highly aligned, loosely coupled teams
+    * make sure seniors with right mindset have time to mentor juniors
+* conclusion
+    * build organisation that allows devs to build the right thing
+    * involve business ppl in development
+    * encourage software craftsmanship
 
 TODO:
-
-* not invented here? dont repeat yourself?
 * how to hire the right ppl / build 0.2x organisation?
-* 10x-engineer myth
-    * exact origin unclear
-    * coding challenges from the 60s / 70s where some participants were 10x better than others
-    * mostly mathematical tasks
-    * "Exploratory experimental studies comparing online and offline programming performance", 1968, H. Sackman, W. J. Erikson, E. E. Grant
-    * refuted many times:
-        * even if they existed, you couldn't hire them off the street
-        * much better to have your 1x devs develop the right thing
+
 
