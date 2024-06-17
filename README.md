@@ -1,12 +1,12 @@
-## Slides for my Talk 'Trends in modern software architecture ...and how to avoid them'
+## Slides for my Talk 'The mythical 0.2x engineer'
 
 ### Abstract (de)
 
-In der modernen Softwareentwicklung haben sich im Laufe der letzten Jahre viele Patterns und Technologien etabliert, die auf den ersten Blick fortschrittlich und vorteilhaft erscheinen, aber eine entscheidende Gemeinsamkeit haben: Hohe Komplexität. Hexagonale Architektur, Reaktive Programmiermodelle und Event Sourcing sind einige Beispiele für solche Architekturmuster. Anhand von praktischen Beispielen möchte dieser Vortrag diverse Patterns, Methoden und Technologien beleuchten... und wie (und wieso) man diese am besten vermeidet.
+Ich bin ein Abstract
 
 ### Show slides
 
-* https://wicked539.github.io/architecture-trends/
+* https://wicked539.github.io/0-2x-engineer/
 * Navigate through slides with <kbd>n</kbd> / <kbd>p</kbd>
 
 ### Run locally
