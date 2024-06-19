@@ -37,7 +37,7 @@
 						</ul>
 					</aside>
 				</section>
-				<section>
+				<!--section>
 					<h3>Overview</h3>
 					<ul>
 						<li class="fragment">Hexagonal Architecture</li>
@@ -47,37 +47,48 @@
 						<li class="fragment">Server-Side Rendering of SPAs</li>
 						<li class="fragment">Summary</li>
 					</ul>
-				</section>
+				</section-->
 				<section>
-					<section><h2>Hexagonal Architecture</h2></section>
-					<section><h3>What is it?</h3>
-						<div style="display: flex;">
-							<div class="fragment" style="flex: 1">
-								<div class="r-stack">
-									<img src="assets/three-tier.png" height="400">
-								</div>
-								<p>Layered</p>
-							</div>
-							<div class="fragment" style="flex: 2">
-								<div class="r-stack">
-									<img src="assets/hexagonal.png" height="400">
-								</div>
-								<p>Hexagonal</p>	
-							</div>
-						</div>
+					<section><h2>The mythical 10x engineer</h2></section>
+					<section><h3>The mythical 10x engineer</h3>
+						<ul>
+							<li class="fragment">Exact origin unclear</li>
+							<li class="fragment">Coding challenges from the 60s / 70s where some participants were 10x better than others</li>
+							<li class="fragment">Refuted many times</li>
+						</ul>
 
 						<aside class="notes">
 							<ul>
-								<li>Layered: Upper layers use lower layers, model classes mapped</li>
-								<li>Hex: Treat DB, UI, Messaging alike</li>
-								<li>Alistair Cockburn [Coburn], 2015, "Ports&Adapters"</li>
-								<li>Inner layers define ports (interfaces) as sole communication points</li>
-								<li>Inner & outer layers impl adapters</li>
-								<li>Plus: Model classes mappers!</li>
+								<li>* "Exploratory experimental studies comparing online and offline programming performance", 1968, H. Sackman, W. J. Erikson, E. E. Grant</li>
+								<li>mostly mathematical tasks</li>
+								<li>even if they existed, you couldn't hire them off the street</li>
+								<li>much better to have your 1x devs develop the right thing</li>
 							</ul>
 						</aside>
 					</section>
-					<section><h3>Promise</h3>
+				</section>
+				<section>
+					<section><h2>Building the right thing</h2></section>
+					<section><h3>Building the right thing</h3>
+						<ul>
+							<li class="fragment">80% of work in 20% of time</li>
+							<li class="fragment">80%-solutions are sufficient for 80% of the use cases</li>
+						</ul>
+					</section>
+					<section><h3>How to find the right 80%</h3>
+						<ul>
+							<li class="fragment">do cttcs before development</li>
+							<li class="fragment">keep iterations short, demand stakeholder feedback</li>
+							<li class="fragment">ship to end-users as early as possible</li>
+							<li class="fragment">learn from the past</li>
+							<li class="fragment">core domain model!</li>
+						</ul>
+					</section>
+					<section><h3>Core domain model</h3>
+						<img src="assets/core-domain-model.png" height="400">
+					</section>
+				<section>
+					<!--section><h3>Promise</h3>
 						<ul>
 							<li class="fragment">Protect your core domain model against leaking</li>
 							<li class="fragment">Outer layers can never force changes to the core</li>
@@ -417,7 +428,7 @@
 							</div>
 						</div>
 					</section>
-				</section>
+				</section-->
 			</div>
 		</div>
 
