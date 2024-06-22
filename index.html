@@ -143,7 +143,7 @@
 					</section>
 				</section>
 				<section>
-					<section><h2>How to keep business people from requesting golden taps?</h2></section>
+					<section><h2>Golden taps 🏅🚰</h2></section>
 					<section><h3>How to keep business people from requesting golden taps?</h3>
 						<ul>
 							<li class="fragment">Demand sales to participate in development cycle</li>
@@ -157,348 +157,53 @@
 							</ul>
 						</aside>
 					</section>
+					<section><h3> And how to keep devs from building them anyway?</h3>
+						<ul>
+							<li class="fragment">80/20 time for experiments</li>
+							<li class="fragment">Demand validation of techinal propositions</li>
+							<li class="fragment">Beware of classic anti-patterns: DRY, KISS, YAGNI, NIH</li>
+							<li class="fragment">Highly aligned, loosely coupled teams</li>
+							<li class="fragment">Make sure seniors with right mindset have time to mentor juniors</li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>Golden tap ~= Feature Creep?</li>
+							</ul>
+						</aside>
+					</section>
 				</section>
-					<!--section><h3>Promise</h3>
+				<section>
+					<section><h2>How to build a 0.2x organisation</h2></section>
+					<section><h3>How to hire the right people</h3>
 						<ul>
-							<li class="fragment">Protect your core domain model against leaking</li>
-							<li class="fragment">Outer layers can never force changes to the core</li>
-						</ul>
-					</section>
-					<section><h3>Pitfalls</h3>
-						<p class="fragment">You end up with lots of interfaces and duplications that constantly change during development, creating a hard-to-maintain codebase</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Domain model evolves during development</li>
-								<li>Model classes, ports, adapaters and mappers change with each iteration</li>
-								<li>Once development is finished, hexagonal is a nice thing, but...</li>
-								<li>...devs are tired by then</li>
-								<li>...you cannot add it to finished project</li>
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Alternatives</h3>
-						<ul>
-							<li class="fragment">What do you want to achieve?
-								<ul>
-									<li class="fragment">Protect core domain<span class="fragment"> &rarr; Why ports & adapters?</span></li>
-									<li class="fragment">Enforce architectural rules<span class="fragment"> &rarr; ArchUnit</span></li>
-								</ul>
-							</li>
-							<li class="fragment">Apply abstractions where they make sense</li>
-							<li class="fragment">Apply common sense everywhere else</li>
+							<li class="fragment">TODO</li>
 						</ul>
 
 						<aside class="notes">
 							<ul>
-								<li>Original idea: Two problems with layers
-									<ul>
-										<li>People dont follow rules</li>
-										<li>Does not fit to more than two ports (ui & db)</li>
-									</ul>
-								</li>
+								<li>TODO</li>
 							</ul>
 						</aside>
-
 					</section>
+				</section>
+				<section>
+					<section><h2>Conclusion</h2></section>
 					<section><h3>Conclusion</h3>
 						<ul>
-							<li class="fragment">Preventing your core domain model from leaking to the web is common sense</li>
-							<li class="fragment">Dozens of interfaces with exactly one implementation are ridiculous</li>
+							<li class="fragment">Build organisation that allows devs to build the right thing</li>
+							<li class="fragment">Involve business people in development</li>
+							<li class="fragment">Encourage software craftsmanship</li>
 						</ul>
 
 						<aside class="notes">
 							<ul>
-								<li>Good: Abstractions around Web Requests, DB Entities</li>
-								<li>Bad: 17 classes representing the same thing</li>
-								<li>Original idea: At least two implementations of port!</li>
+								<li>Simple quote: Kent Beck (XP) / Ward Cunningham (Wiki)</li>
+								<li>Both signed agile manifesto</li>
 							</ul>
 						</aside>
 					</section>
 				</section>
-				<section>
-					<section><h2>Reactive Programming Models</h2></section>
-					<section><h3>What is it?</h3>
-						<ul>
-							<li class="fragment">Classic, blocking programming models<br>
-								&nbsp;<span class="fragment"> &rarr; Thread per Request-Model</span><br>
-								&nbsp;<span class="fragment"> &rarr; Methods return results</span></li>
-							<li class="fragment">Reactive programming models<br>
-								&nbsp;<span class="fragment"> &rarr; Event Loop Model</span><br>
-								&nbsp;<span class="fragment"> &rarr; Callback functions or Futures</span></li>
-						</ul>
-
-						<aside class="notes">
-							<ul>
-								<li>Tomcat: Thread per Request Model, supplied from Threadpool</li>
-								<li>Netty: Event Loop Model: Channel (Connection) with Pipeline of Handlers, executed by EventLoop (Thread)</li>
-								<li>Callbacks (incl error!) or Futures / Mono&Flux in Reactor</li>
-								<li>Implementation: observer pattern</li>
-							</li>
-						</aside>
-					</section>
-					<section><h3>Promise</h3>
-						<ul>
-							<li class="fragment">Threads not blocked by downstream work</li>
-							<li class="fragment">Very responsive applications</li>
-							<li class="fragment">Tens of thousands of requests in seconds</li>
-						</ul>
-
-						<aside class="notes">
-							<ul>
-								<li>Threads are no longer blocked waiting for downstream work to continue</li>
-								<li>We can build very responsive APIs</li>
-								<li>Easily handling tens of thousands of requests in seconds</li>
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Pitfalls</h3>
-						<ul>
-							<li class="fragment">Very different programming model</li>
-							<li class="fragment">Very steep learning curve</li>
-							<li class="fragment">Blocking downstream APIs</li>
-						</ul>
-
-						<aside class="notes">
-							<ul>
-								<li>The programming model is very different from classic, imperative code</li>
-								<li>TODO: graphic example of code style</li>
-								<li>Call method, use return value vs. fluent api & .then()</li>
-								<li>exception handling vs. onError()</li>
-								<li>Debugging is harder</li>
-								<li>The learning curve is very steep, it takes years (!) for a team of old-school java devs to fully embrace non-blocking APIs</li>
-								<li>Can be fully leveraged only when downstream APIs (database, external systems, ...) can also be used in a reactive way</li>
-							</li>
-						</aside>
-					</section>
-					<section><h3>Alternatives</h3>
-						<ul>
-							<li class="fragment">Consider expected load scenarios before making design decisions</li>
-							<li class="fragment">In most cases, horizontal scaling might prove to be more cost-efficient</li>
-							<li class="fragment">In Java, Virtual Threads might make reactive APIs obsolete</li>
-						</ul>
-
-						<aside class="notes">
-							<ul>
-								<li>Virtual Threads left preview state with Java 21</li>
-								<li>Faster thread switching than system threads</li>
-								<li>Still some problems with syncronized (MySQL JDBC)</li>
-								<li>Spring Boot: TomcatProtocolHandlerCustomizer -> setExecutor</li>
-							</li>
-						</aside>
-					</section>
-					<section><h3>Conclusion</h3>
-						<p class="fragment">From the Spring WebFlux documentation:</p>
-						<p class="fragment">
-							<q cite="https://docs.spring.io/spring-framework/reference/web/webflux/new-framework.html">
-						    We expect that, for a wide range of applications, the shift is unnecessary.
-						  	</q>
-						</p>
-					</section>
-				</section>
-				<section>
-					<section><h2>CQRS</h2></section>
-					<section><h3>What is it?</h3>
-						<ul>
-							<li class="fragment">Command-query responsibilty segregation</li>
-							<li class="fragment">Separate write- & read-models</li>
-						</ul>
-						<aside class="notes">
-							<ul>
-								<li>Command-query responsibilty segregation</li>
-								<li>Essentially means separating the write- and the read-models of your app</li>
-								<li>Commands change data -> write</li>
-								<li>Queries read data -> read</li>
-								<li>Described by Greg Young, 2010</li>
-							</li>
-						</aside>
-					</section>
-					<section><h3>Promise</h3>
-						<ul>
-							<li class="fragment">APIs with asymmetric read-write load</li>
-							<li class="fragment">APIs where queries require computed outputs</li>
-							<li class="fragment">Message-driven APIs</li>
-						</ul>
-						<p class="fragment">...all benefit from separate models</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Asymmetric read-write load (lots of writes, very little reads)</li>
-								<li>Asymmetric APIs (read operations require computed outputs, message/command-driven write APIs)</li>
-								<li>...all benefit from separate models</li>
-								<li>TODO: mention CQS</li>
-							</li>
-						</aside>
-					</section>
-					<section><h3>Pitfalls</h3>
-						<p class="fragment">Maintaining separate models, along with controller classes, business logic, persistence layers etc, leads to far more complex software projects</p>
-						<p class="fragment">Separate models implicitly lead to eventual consistency (stale reads)</p>
-					</section>
-					<section><h3>Alternatives</h3>
-						<p class="fragment">Always consider using a plain CRUD API first</p>
-						<p class="fragment">Start CRUD API, evolve a separate write API over time, keeping the CRUD API for queries</p>
-					</section>
-					<section><h3>Conclusion</h3>
-						<p class="fragment">From Greg Young's blog:</p>
-						<blockquote class="fragment" cite="https://gregfyoung.wordpress.com/2012/03/02/cqrs/" style="text-align: left;">
-					   	CQRS is not a silver bullet<br>
-						CQRS is not a top level architecture<br>
-						CQRS is not new<br>
-						CQRS is not shiny<br>
-						CQRS will not make your jump shot any better<br>
-						[...]<br>
-						CQRS can open many doors.
-					  	</blockquote>
-					</section>
-				</section>
-				<section>
-					<section><h2>Event Sourcing</h2></section>
-					<section><h3>What is it?</h3>
-						<div style="display: flex;">
-							<div class="fragment" style="flex: 1">
-								<div class="r-stack">
-									<img src="assets/simple-persistence.png" height="400">
-								</div>
-								<p style="white-space:nowrap; width:400px; vertical-align:top;">Object Persistence</p>
-							</div>
-							<div class="fragment" style="flex: 2">
-								<div class="r-stack">
-									<img src="assets/event-sourcing.png" height="354" style="margin-top: 36px; margin-left: 158px;">
-									<img class="fragment" src="assets/event-sourcing-legend.png" height="400">
-								</div>
-								<p>Event Sourcing</p>	
-							</div>
-						</div>
-
-						<aside class="notes">
-							<ul>
-								<li>Instead of state of a business object, we persist the changes manipulating it</li>
-								<li >Event = immutable fact</li>
-								<li >Aggregate = business object</li>
-								<li >Event log = stream of events</li>
-							</ul>
-						</aside>
-					</section>
-
-					<section><h3>Promise</h3>
-						<p class="fragment">Focus on change instead of state makes building reactive systems easier</p>
-						<p class="fragment">All domain objects implicitly have a history</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Business is driven by events</li>
-								<li>Software should be driven by events, too</li>
-								<li>Ability to time travel</li>
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Pitfalls</h3>
-						<p class="fragment">Very complex persistence pattern</p>
-						<p class="fragment">Usually implemented along with CQRS, leading to expotentially more complex software systems</p>
-						<p class="fragment">When used with CQRS, the aggregates aren't allowed to answer queries</p>
-						<p class="fragment">Very steep learning curve</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Persist events, build aggregates to handle events</li>
-								<li>Events must be immutable, problematic /w personal data</li>
-								<li>Schema evolution: Must be able to re-build aggregates from old events</li>
-								<li>With CQRS, we cant query the aggregates -> must build read models (projections)</li>
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Alternatives</h3>
-						<p class="fragment">Event-driven systems can easily be build using simple persistence patterns</p>
-						<p class="fragment">When a history of domain objects is required (eg, for auditing), consider using Envers</p>
-						<aside class="notes">
-							<ul>
-								<li>Spring Data Envers merged into spring data jpa since 3.0!</li>
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Conclusion</h3>
-						<p class="fragment">Unless you're building a real-time stock trading system, don't do it</p>
-					</section>
-				</section>
-				<section>
-					<section><h2>Server-Side Rendering of SPAs</h2></section>
-					<section><h3>What is it?</h3>
-						<p class="fragment">"Classic" SPAs fetch only barebone HTML and lots of resources via HTTP, the app is rendered entirely within the browser</p>
-						<p class="fragment">Server-Side Rendered apps are pre-rendered on the server and transmitted as actual, usable HTML to the browser</p>
-						<p class="fragment">The app is then "hydrated" in the browser, making it fully operational</p>
-					</section>
-					<section><h3>Promise</h3>
-						<p class="fragment">First data to be transferred is usable HTML</p>
-						<p class="fragment">Browser can render instantly, without executing JS</p>
-						<p class="fragment">Faster load times, less flicker</p>
-						<p class="fragment">Required for High-End SEO</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Instead of downloading multiple megabytes of resources prior to bootstrapping, the first assets to be transferred are already usable HTML</li>
-								<li>Browser can instantly render, no JS needed</li>
-								<li>App becomes usable much faster</li>
-								<li>Less content flicker</li>
-								<li>SEO: Modern crawlers execute JS, but have crawl budget limits</li>
-								<li>SEO: Pre-Rendering might be required for big sites (Webshop with 50k articles)</li>
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Pitfalls</h3>
-						<p class="fragment">SPA must support rendering in browser as well as backend & hydration</p>
-						<p class="fragment">Most server-side rendering frameworks are not production-ready</p>
-						
-						<aside class="notes">
-							<ul>
-								<li>There are SPA frameworks promising to deliver server-side rendering with a smooth developer experience (hi Nuxt &#128075;),</li>
-								<li>but offer a questionable experience in other aspects (our test API is still in development and should not be used for production &#128169;)</li>			
-							</ul>
-						</aside>
-					</section>
-					<section><h3>Alternatives</h3>
-						<p class="fragment">On mondern 4g/5g networks, transmitting a few megabytes is no longer an issue</p>
-						<p class="fragment">Consider usability instead: On mobile devices, building offline-first apps that rarely need a full-page reload is much more desirable</p>
-					</section>
-					<section><h3>Conclusion</h3>
-						<p class="fragment">Server-side templating is great</p>
-						<p class="fragment">Server-side rendered SPAs add a huge amount of complexity, use with care</p>
-					</section>
-				</section>
-				<section>
-					<section><h2>The quest for simplicity</h2></section>
-					<section><h3>The quest for simplicity</h3>
-						<p class="fragment">Do the simplest thing that could possibly work</p>
-						<p class="fragment">Non-functional requirements matter!</p>
-						<p class="fragment">Consider the available skill set</p>
-						<p class="fragment">Mind Conways law</p>
-						<p class="fragment">Highly aligned, loosely coupled</p>
-						<p class="fragment">Make sure technical and business goals align</p>
-
-						<aside class="notes">
-							<ul>
-								<li>Simple quote: Kent Beck (Agile Manifesto, TDD)</li>			
-							</ul>
-						</aside>
-					</section>
-				</section>
-				<section>
-					<section><h3>Thank you!</h3>
-						<div style="display: flex;">
-							<div style="flex: 1">
-								<div class="r-stack">
-									<img src="assets/slide-qr.png" height="300">
-								</div>
-								<a href="https://github.com/wicked539/architecture-trends">Slides</a>
-							</div>
-							<div style="flex: 1">
-								<div class="r-stack">
-									<img src="assets/linkedin-qr.png" height="300">
-								</div>
-								<a href="https://www.linkedin.com/in/sven-m%C3%BCller-a96a17310/">LinkedIn</a>
-							</div>
-						</div>
-					</section>
-				</section-->
 			</div>
 		</div>
 
