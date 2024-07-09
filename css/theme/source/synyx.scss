@@ -46,7 +46,7 @@ $heading4Size: 1.0em;
 // custom table style:
 // border on bottom of first row and right of first column
 .reveal table {
-	font-size: 0.55em
+	font-size: 0.52em;
 }
 .reveal table tr:first-child th {
 	border-bottom: 1px solid;
@@ -56,4 +56,5 @@ $heading4Size: 1.0em;
 }
 .reveal table td, .reveal table th {
 	border-bottom: none;
+	padding: 0.5em 0.5em 0.5em 0.5em;
 }
