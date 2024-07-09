@@ -34,6 +34,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-link-color-hover: #6ca0e8;
   --r-selection-background-color: #98bdef;
   --r-selection-color: #fff;
+  --r-overlay-element-bg-color: 240, 240, 240;
+  --r-overlay-element-fg-color: 0, 0, 0;
 }
 
 .reveal-viewport {
@@ -352,4 +354,19 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   .backgrounds {
     background-color: var(--r-background-color);
   }
+}
+.reveal table {
+  font-size: 0.55em;
+}
+
+.reveal table tr:first-child th {
+  border-bottom: 1px solid;
+}
+
+.reveal table th:first-child {
+  border-right: 1px solid;
+}
+
+.reveal table td, .reveal table th {
+  border-bottom: none;
 }

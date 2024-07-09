@@ -212,7 +212,12 @@
 						</aside>
 					</section>
 					<section><h3>Westrum's Culture Types</h3>
-						<table style="font-size: 0.55em">
+						<table >
+						  	<colgroup>
+								<col span="3"/>
+								<!-- col style is set with javascript when fragment becomes visible -->
+								<col class="fragment col-bg-color" data-fragment-index="4" />
+							</colgroup>
 							<tr>
 								<th>Culture</th>
 								<th>Pathological</th>
@@ -265,7 +270,7 @@
 
 						<aside class="notes">
 							<ul>
-								<li class="fragment">Only generative organzations can be 0.2x</li>
+								<li>Only generative organzations can be 0.2x</li>
 							</ul>
 						</aside>
 					</section>
@@ -307,6 +312,18 @@
 				    39: 'next',
 				    37: 'prev'
 				}
+			});
+
+			// style last column of westrum table when fragment becomes visible
+			Reveal.on('fragmentshown', (event) => {
+			  if (event.fragment.classList.contains('col-bg-color')) {
+			  	event.fragment.style.backgroundColor = 'gold';
+			  }
+			});
+			Reveal.on('fragmenthidden', (event) => {
+			  if (event.fragment.classList.contains('col-bg-color')) {
+			  	event.fragment.style.backgroundColor = 'inherit';
+			  }
 			});
 		</script>
 	</body>

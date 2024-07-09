@@ -42,3 +42,18 @@ $heading4Size: 1.0em;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+// custom table style:
+// border on bottom of first row and right of first column
+.reveal table {
+	font-size: 0.55em
+}
+.reveal table tr:first-child th {
+	border-bottom: 1px solid;
+}
+.reveal table th:first-child {
+	border-right: 1px solid;
+}
+.reveal table td, .reveal table th {
+	border-bottom: none;
+}
