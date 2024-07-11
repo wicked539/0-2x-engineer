@@ -1,4 +1,4 @@
-## Slides for my Talk 'The mythical 0.2x engineer'
+## Slides for my Talk 'The mythical 20% engineer'
 
 ### Abstract (de)
 
